@@ -12,10 +12,8 @@ def dow (designate):
         5: "friday",
         6: "saturday"
     }
-    if designate in switcher:
-         return switcher[designate]
-    else:
-         return "Invalid number!!"
+
+    return switcher[designate] if designate in switcher else "Invalid number!!"
 
 daynum = input("please give day 0-6 ")
 print ("you have given, ", daynum,  dow (int(daynum)))
